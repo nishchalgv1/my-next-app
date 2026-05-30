@@ -1,7 +1,10 @@
 // define the contactPage route
-'use client'
 import submitContactForm from "../actions/submitContactForm";
-function ContactForm(){
+import { getDetails } from "../actions/submitContactForm";
+async function ContactForm(){
+    // calling server function getDetails()
+    const users = await getDetails();
+
     return (
         <>
         <h1>Contact Form</h1>
@@ -21,6 +24,18 @@ function ContactForm(){
             <br /><br />
             <button type="submit">Send Message</button>
         </form>
+        <hr />
+        <h1>User Details</h1>
+        {
+            users.map((user: any, index: number) => (
+                <div key={index}>
+                    <h3>{user.fullName}</h3>
+                    <p>{user.email}</p>
+                    <p>{user.message}</p>
+                    <hr />
+                </div>
+            ))
+        }
         </>
     )
 }
