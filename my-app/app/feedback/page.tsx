@@ -1,6 +1,11 @@
 // define the server action for feedback form
 import submitFeedbackForm from "../actions/submitFeedbackForm";
-function FeedbackForm(){
+import { getAllFeedbacks } from "../actions/submitFeedbackForm";
+import SubmitButton from "../components/SubmitButton";
+
+async function FeedbackForm(){
+    const feedbacks = await getAllFeedbacks();
+    console.log("feedbacks ", feedbacks);
     return (
         <>
         <h1>User Feedback Form</h1>
@@ -22,9 +27,20 @@ function FeedbackForm(){
             </textarea>
             <br /><br />
 
-            <button type="submit">Submit Feedback</button>
+            <SubmitButton/>
 
         </form>
+        <hr />
+        {
+            feedbacks.map((feedback:any, index:number) => (
+                <div key={index}>
+                    <h1>{feedback.username}</h1>
+                    <h3>{feedback.email}</h3>
+                    <p>{feedback.message}</p>
+                    <hr />
+                </div>
+            ))
+        }
         </>
     )
 }
