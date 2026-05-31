@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // define the contactPage route
 import submitContactForm from "../actions/submitContactForm";
 import { getDetails } from "../actions/submitContactForm";
@@ -36,8 +37,18 @@ async function ContactForm(){
                 </div>
             ))
         }
+=======
+function Contact(){
+    return (
+        <>
+        This is Contact Page.
+>>>>>>> f6c75dcb0fb84966274ec727d6fa74c4e277cbeb
         </>
     )
 }
 
+<<<<<<< HEAD
 export default ContactForm;
+=======
+export default Contact;
+>>>>>>> f6c75dcb0fb84966274ec727d6fa74c4e277cbeb
