@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-export default function Home() {
-  return (
-   <h1>Hey there</h1>
-  );
-}
-=======
 function Home(){
   return (
     <div>
@@ -15,4 +7,3 @@ function Home(){
 }
 
 export default Home;
->>>>>>> f6c75dcb0fb84966274ec727d6fa74c4e277cbeb

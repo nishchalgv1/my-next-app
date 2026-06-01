@@ -2,6 +2,7 @@
 import { useFormStatus } from "react-dom";
 function Button(){
     const {pending} = useFormStatus();
+    // pending: true/false
     return (
         <>
         <button disabled={pending}>

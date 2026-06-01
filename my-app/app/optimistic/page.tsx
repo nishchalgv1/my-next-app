@@ -16,7 +16,7 @@ export default function UserComments(){
         //const comment:string[] = ["I am learning useOptimistic"
         startTransition(()=>{
             addOptimistic("this is a comment");
-        });
+        }); 
     }
     
     return (
@@ -33,3 +33,14 @@ export default function UserComments(){
         </>
     )
 }
+
+// INSERT INTO useSelectedLayoutSegments()
+
+// INSERT INTO students(name, age, course)
+// VALUES()
+
+// UPDATE query() -
+// UPDATE students where age= 10
+// UPDATE students SET age = 10 where name = "AMi"
+
+// DELETE speicif rwo DELETE FROM students where name = 'sara'

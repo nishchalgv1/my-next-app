@@ -1,6 +1,6 @@
 // define the server action for feedback form
-import submitFeedbackForm from "../actions/submitFeedbackForm";
-import { getAllFeedbacks } from "../actions/submitFeedbackForm";
+import submitFeedbackForm from "../actions/submitFeedback3";
+import { getAllFeedbacks } from "../actions/submitFeedback3";
 import SubmitButton from "../components/SubmitButton";
 
 async function FeedbackForm(){
@@ -32,11 +32,12 @@ async function FeedbackForm(){
         </form>
         <hr />
         {
+            
             feedbacks.map((feedback:any, index:number) => (
                 <div key={index}>
                     <h1>{feedback.username}</h1>
                     <h3>{feedback.email}</h3>
-                    <p>{feedback.message}</p>
+                    <p>{feedback.feedback_msg}</p>
                     <hr />
                 </div>
             ))

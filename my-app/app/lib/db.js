@@ -1,8 +1,11 @@
-import { Pool } from "pg";
+import {Pool} from "pg";
 
-// Create a connection pool
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  user: "postgres",
+  host: "localhost",
+  database: "feedbacks",
+  password: '12345678',
+  port: 5432
 });
-console.log("Connection Established", pool);
+
 export default pool;
