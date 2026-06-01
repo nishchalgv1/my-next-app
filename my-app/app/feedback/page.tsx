@@ -1,5 +1,5 @@
 // define the server action for feedback form
-import submitFeedbackForm from "../actions/submitFeedback3";
+import submitFeedbackForm3 from "../actions/submitFeedback3";
 import { getAllFeedbacks } from "../actions/submitFeedback3";
 import SubmitButton from "../components/SubmitButton";
 
@@ -9,7 +9,7 @@ async function FeedbackForm(){
     return (
         <>
         <h1>User Feedback Form</h1>
-        <form action={submitFeedbackForm}>
+        <form action={submitFeedbackForm3}>
             <label htmlFor="username">Username: </label>
             <input type="text" name="username" id="username" 
             placeholder="Enter your username" />

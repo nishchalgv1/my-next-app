@@ -1,8 +1,8 @@
 'use server'
-import pool from '../database/db'
+import pool from '../lib/db'
 import { revalidatePath } from 'next/cache';
 
-async function submitFeedbackForm(formData:FormData){
+async function submitFeedbackForm3(formData:FormData){
     console.log("feedback form: ", formData);
 
     // extract username, email, feedback
@@ -12,7 +12,7 @@ async function submitFeedbackForm(formData:FormData){
 
     // store these details in db
     await pool.query(`
-        INSERT INTO feedbacks(username, email, feedback_msg)
+        INSERT INTO feedback(username, email, feedback_msg)
         VALUES ('${username}', '${email}', '${feedback_msg}')
         `);
     console.log("data save");
@@ -29,4 +29,8 @@ export async function getAllFeedbacks(){
     return data.rows;
 }
 
-export default submitFeedbackForm;
+export default submitFeedbackForm3;
+
+// feedbacks
+// create table customerReview
+// username, email, 
