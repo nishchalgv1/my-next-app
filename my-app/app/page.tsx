@@ -1,7 +1,12 @@
+import Search from "@/components/Search";
+import Filter from "@/components/Filter";
+import Sort from "@/components/Sort";
 function Home(){
   return (
     <div>
-      <h1>Home Route</h1>
+      <Search/>
+      <Filter/>
+      <Sort/>
     </div>
   )
 }
